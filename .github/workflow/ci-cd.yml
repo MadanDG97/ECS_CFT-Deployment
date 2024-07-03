@@ -27,3 +27,4 @@ jobs:
     - name: Deploying ECS
       run: |
         aws cloudformation deploy --stack-name "test-ecs-stack" --template-file "infrastructure.yaml" --region us-east-1 --capabilities CAPABILITY_IAM
+      
