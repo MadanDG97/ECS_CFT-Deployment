@@ -1,13 +1,13 @@
-Parameters:  #This parameter sets the name of the ECS cluster. The type is String, and the default value is "FlaskECSCluster"
+Parameters:  
   ECSClusterName:        
     Description: A Cluster ECS Name
     Type: String
     Default: "FlaskECSCluster"
-  VPCId:        #Specifies the VPC ID where the resources will be launch
+  VPCId:       
     Description: select the proper VPC ID in order to launch the resources within it.
     Type: AWS::EC2::VPC::Id
     Default: "vpc-b7cadbcf"
-  Subnets:        # list of subnet IDs where resources will be launched
+  Subnets:        
     Description: select the proper subnets ID's
     Type: List<AWS::EC2::Subnet::Id>
     Default: "subnet-515c300c,subnet-e2fc8edd"
@@ -27,15 +27,15 @@ Parameters:  #This parameter sets the name of the ECS cluster. The type is Strin
     Description: CPU Capacity of the ECS Container
     Type: Number
     Default: 512
-  ContainerMemoryCapacity: # Memory for the ECS container in MiB. The type is Number, and the default value is 1024.
+  ContainerMemoryCapacity: 
     Description: Memory Capacity of the ECS Container
     Type: Number
     Default: 1024
-  ContainerName:  # Name of the container.
+  ContainerName:  
     Description: Name of the container
     Type: String
     Default:  "FlaskHelloWorldApp"
-  ContainerImage:  #URL of the container image in ECR
+  ContainerImage: 
     Description: ECR Image URL to launch the container
     Type: String
     Default:  "001082169132.dkr.ecr.us-east-1.amazonaws.com/flask-app:latest"
@@ -63,11 +63,11 @@ Parameters:  #This parameter sets the name of the ECS cluster. The type is Strin
     Description: Exposing Port num of the ALB
     Type: Number
     Default: 80
-  ALBSGAllowedCiderblock: # CIDR block for inbound traffic allowed to the ALB. 
+  ALBSGAllowedCiderblock: 
     Description: Inbound traffic allowed CIDR block for ALB
     Type: String
     Default: "0.0.0.0/0"
-  ALBName: #CIDR block for inbound traffic allowed to the ALB.
+  ALBName: #
     Description: Name of ALB
     Type: String
     Default: "FlaskALB"
